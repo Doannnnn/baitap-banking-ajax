@@ -1,0 +1,54 @@
+<th:block th:fragment="modalUpdate">
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-xl" role="document" style="top: 100px;">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Customer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="frmUpdate">
+                        <div class="row mb-3 mt-3">
+                            <input type="hidden" id="customerId">
+                            <div class="col-lg-6">
+                                <label for="fullNameUpdate" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullNameUpdate" name="fullNameUpdate" data-errorid="fullNameError">
+                                <div class="error-message" id="fullNameError"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="emailUpdate" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="emailUpdate" name="emailUpdate" data-errorid="emailError">
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-lg-6">
+                                <label for="phoneUpdate" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phoneUpdate" name="phoneUpdate" data-errorid="phoneError">
+                                <div class="error-message" id="phoneError"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="addressUpdate" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="addressUpdate" name="addressUpdate" data-errorid="addressError">
+                                <div class="error-message" id="addressError"></div>
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-outline-secondary" id="updateButton">
+                                    <i class="far fa-edit"></i>
+                                    Save Changes
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>

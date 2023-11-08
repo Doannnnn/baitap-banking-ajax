@@ -1,0 +1,68 @@
+<th:block th:fragment="modalTransfer">
+    <div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-xl" role="document" style="top: 100px;">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Transfer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="frmTransfer">
+                        <div class="row mb-3 mt-3">
+                            <div class="col-lg-3">
+                                <label for="senderId" class="form-label">Sender ID</label>
+                                <input type="number" class="form-control" id="senderId" readonly="readonly">
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="senderFullName" class="form-label">Sender Name</label>
+                                <input type="text" class="form-control" id="senderFullName" readonly="readonly">
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="senderEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="senderEmail" readonly="readonly">
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="senderBalance" class="form-label">Sender balance</label>
+                                <input type="number" class="form-control" id="senderBalance" readonly="readonly">
+                            </div>
+                        </div>
+                        <div class="row mb-3 mt-3">
+                            <div class="col-lg-3">
+                                <label for="recipientId" class="form-label">Recipient Name</label>
+                                <select class="form-control" id="recipientId">
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="transferAmount" class="form-label">Transfer Amount ($)</label>
+                                <input type="number" class="form-control" id="transferAmount" name="transferAmount" data-errorid="transferAmountError" min="0">
+                                <div class="error-message" id="transferAmountError"></div>
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="fees" class="form-label">Fees (%)</label>
+                                <input type="number" class="form-control" id="fees" readonly="readonly" value="10">
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="total" class="form-label">Total Amount Of Transaction ($)</label>
+                                <input type="number" class="form-control" id="total" readonly="readonly" value="0">
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-outline-primary" id="transferButton">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    Transfer
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
